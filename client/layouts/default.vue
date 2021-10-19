@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
-    <h1>Home page</h1>
+  <div>
+    <Header />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
 
