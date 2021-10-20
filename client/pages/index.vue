@@ -12,9 +12,9 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum explicabo deleniti labore eius dolorum facilis minima itaque nihil, illo natus?
             </p>
             <div>
-              <router-link class="button button-primary" to="/contact">
+              <nuxt-link class="button button-primary" to="/contact">
                 Contact Us
-              </router-link>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-md-5"></div>
@@ -85,46 +85,9 @@
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-1.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-2.png" class="img-fluid" alt>
-            </div>t>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-3.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-4.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-5.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-6.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-7.png" class="img-fluid" alt>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="work-card">
-              <img src="@/assets/images/work-8.png" class="img-fluid" alt>
-            </div>
+        <div class="row justify-content-center">
+          <div v-for="work in works" :key="work.id" class="column">
+            <WorkCard :title="work.title" :image="work.img" />
           </div>
         </div>
       </div>
@@ -155,6 +118,56 @@ export default {
           title: 'Happy Clients',
           num: '98%'
         }
+      ],
+      works: [
+        {
+          id: 1,
+          title: 'Project 1',
+          project_gh_link: '',
+          img: require('@/assets/images/work-1.png')
+        },
+        {
+          id: 2,
+          title: 'Project 2',
+          project_gh_link: '',
+          img: require('@/assets/images/work-2.png')
+        },
+        {
+          id: 3,
+          title: 'Project 3',
+          project_gh_link: '',
+          img: require('@/assets/images/work-3.png')
+        },
+        {
+          id: 4,
+          title: 'Project 4',
+          project_gh_link: '',
+          img: require('@/assets/images/work-4.png')
+        },
+        {
+          id: 5,
+          title: 'Project 5',
+          project_gh_link: '',
+          img: require('@/assets/images/work-5.png')
+        },
+        {
+          id: 6,
+          title: 'Project 6',
+          project_gh_link: '',
+          img: require('@/assets/images/work-6.png')
+        },
+        {
+          id: 7,
+          title: 'Project 7',
+          project_gh_link: '',
+          img: require('@/assets/images/work-7.png')
+        },
+        {
+          id: 8,
+          title: 'Project 8',
+          project_gh_link: '',
+          img: require('@/assets/images/work-8.png')
+        }
       ]
     }
   }
@@ -163,7 +176,7 @@ export default {
 
 <style>
 .hero-home {
-  background-image: url("../assets/images/hero-home.png");
+  background-image: url("@/assets/images/hero-home.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -251,7 +264,7 @@ export default {
   margin-bottom: 2rem;
 }
 
-.work-card {
-  margin-bottom: 1rem;
+.column {
+  padding: 5px;
 }
 </style>
