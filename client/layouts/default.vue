@@ -17,17 +17,21 @@ export default {}
   font-family: "Lato", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .app {
   position: relative;
 }
 
 .section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .section-title {
   color: #fff;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 5rem;

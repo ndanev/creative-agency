@@ -1,34 +1,50 @@
 <template>
   <header class="header" :class="{header_bg: scrollPosition > 200}">
-    <div class="container">
+    <div class="container-fluid">
       <nav>
         <div class="logo">
           <nuxt-link class="logo-link" to="/">
-            <div class="logo-prefix">online</div>Creative
+            <div class="logo-prefix">
+              online
+            </div>Creative
             <span>Agency</span>
           </nuxt-link>
         </div>
         <ul class="header-list">
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/">Home</nuxt-link>
+            <nuxt-link class="header-list-link" to="/">
+              Home
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/about">About</nuxt-link>
+            <nuxt-link class="header-list-link" to="/about">
+              About
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/work">Work</nuxt-link>
+            <nuxt-link class="header-list-link" to="/work">
+              Work
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/process">Process</nuxt-link>
+            <nuxt-link class="header-list-link" to="/process">
+              Process
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/services">Services</nuxt-link>
+            <nuxt-link class="header-list-link" to="/services">
+              Services
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/testimonials">Testimonials</nuxt-link>
+            <nuxt-link class="header-list-link" to="/testimonials">
+              Testimonials
+            </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/contact">Contact</nuxt-link>
+            <nuxt-link class="header-list-link" to="/contact">
+              Contact
+            </nuxt-link>
           </li>
         </ul>
       </nav>
@@ -84,7 +100,6 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
   border-bottom: 1px solid #705096;
 }
 
@@ -93,7 +108,7 @@ header nav {
 }
 
 .logo-link {
-  font-size: 1rems;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 1rem;
@@ -111,6 +126,7 @@ header nav {
   color: #f33c7a;
   font-size: 1.4rem;
   margin-top: -0.4rem;
+  line-height: 1.6rem;
 }
 
 .logo-link .logo-prefix {
@@ -118,6 +134,11 @@ header nav {
   font-weight: 100;
   margin-left: 40px;
   margin-bottom: -5px;
+    transition: all .25s ease-in-out;
+}
+
+.logo-link:hover > .logo-prefix {
+  margin-left: -40px;
 }
 
 .header-list-link {
@@ -126,6 +147,7 @@ header nav {
   font-weight: bold;
   color: #fff;
   position: relative;
+  font-size: .9rem;
 }
 
 .header-list-link:hover {
