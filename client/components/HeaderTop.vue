@@ -5,8 +5,16 @@
         <h1>
           Web Design & <span>Development</span>
         </h1>
+        <!-- <div>
+          <a href="https://www.linkedin.com/in/nemanjadanev/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/ndanev?tab=repositories" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+        </div> -->
         <div>
-          <i class="fas fa-phone-alt"></i>
+          <i class="fas fa-phone-alt" />
           <a href="tel:4373283418">
             (437) 328-3418
           </a>
@@ -23,13 +31,13 @@ export default {}
 <style>
 .header-top {
     padding: 0 1rem;
-    background-color: #1b0c30;
+    background-color: rgba(27, 12, 48, 1);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 30px;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;

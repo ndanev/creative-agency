@@ -78,11 +78,12 @@ header {
   top: 30px;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header_bg {
-  background-color: #2d1948;
+  /* background-color: #2d1948; */
+  background-color: rgba(45, 25, 72, 1);
 }
 
 a {

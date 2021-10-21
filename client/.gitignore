@@ -8,7 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Additional for ignore
-.github/workflows
+.github
 
 # Runtime data
 pids

@@ -3,7 +3,7 @@
     <div class="hero-home">
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-md-7 d-flex justify-content-center flex-column">
+          <div class="col-md-7 offset d-flex justify-content-center flex-column">
             <h1 class="hero-title">
               Online <br> Creative
               <span>Agency</span>
@@ -17,7 +17,6 @@
               </nuxt-link>
             </div>
           </div>
-          <div class="col-md-5"></div>
         </div>
       </div>
     </div>
@@ -26,7 +25,9 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h1 class="section-title">
-              About Us
+              <span>
+                About Us
+              </span>
             </h1>
           </div>
         </div>
@@ -52,7 +53,9 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
             <h1 class="section-title">
-              Our Skills
+              <span>
+                Our Skills
+              </span>
             </h1>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis aut iste tenetur aliquam enim cupiditate dolore consequatur laborum labore assumenda repellat tempore, nam voluptatibus.
@@ -78,7 +81,9 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-4 text-center">
             <h1 class="section-title">
-              Our Works
+              <span>
+                Our Works
+              </span>
             </h1>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
@@ -97,7 +102,9 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
             <h1 class="section-title">
-              Our Work Process
+              <span>
+                Our Work Process
+              </span>
             </h1>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
@@ -116,7 +123,9 @@
         <div class="row justify-content-center">
           <div class="col-md-6 text-center">
             <h1 class="section-title">
-              Latest Posts
+              <span>
+                Latest Posts
+              </span>
             </h1>
           </div>
         </div>

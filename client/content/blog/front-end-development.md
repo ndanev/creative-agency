@@ -2,7 +2,7 @@
 title: Front end development
 desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 slug: front-end-development
-image: frontend-web-development.jpg
+image: frontend-web-development.png
 ---
 
 # Front end development

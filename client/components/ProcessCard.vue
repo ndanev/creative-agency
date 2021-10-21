@@ -2,14 +2,14 @@
   <article class="process-card">
     <div>
       <div class="process-card-title">
-        {{ processTitle }} <i class="fas fa-long-arrow-alt-right"></i>
+        {{ processTitle }} <i class="fas fa-long-arrow-alt-right" />
       </div>
       <div class="process-card-des">
         {{ processDesc }}
       </div>
     </div>
     <div class="process-card-icon">
-      <i class="far fa-gem"></i>
+      <i class="far fa-gem" />
     </div>
   </article>
 </template>

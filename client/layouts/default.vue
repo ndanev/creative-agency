@@ -42,10 +42,28 @@ html {
 
 .section-title {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 5rem;
+}
+
+.section-title span {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title span:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 4px;
+  background-color: #f33c7a;
+  z-index: -1;
+
 }
 
 .section-subtitle {
