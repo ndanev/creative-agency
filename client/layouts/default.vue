@@ -1,8 +1,9 @@
 <template>
   <main class="main">
-    <EmailMe />
+    <HeaderTop />
     <Header />
     <Nuxt />
+    <EmailMe />
     <Footer />
   </main>
 </template>
