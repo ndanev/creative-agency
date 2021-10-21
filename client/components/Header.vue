@@ -27,7 +27,7 @@
             </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/process">
+            <nuxt-link class="header-list-link" to="#process">
               Process
             </nuxt-link>
           </li>

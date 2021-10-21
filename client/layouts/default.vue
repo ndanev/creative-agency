@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <main class="main">
+    <EmailMe />
     <Header />
     <Nuxt />
     <Footer />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -20,6 +21,14 @@ export default {
 
 body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  position: relative;
 }
 
 .app {

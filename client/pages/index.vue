@@ -92,7 +92,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-process">
+    <section id="process" class="section section-process">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
@@ -111,13 +111,41 @@
         </div>
       </div>
     </section>
+    <div class="section section-blog">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h1 class="section-title">
+              Latest Posts
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div v-for="(article, index) in articles" :key="index" class="col-md-4">
+            <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card">
+              <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid">
+              <div class="details">
+                <h3>
+                  {{ article.title }}
+                </h3>
+                <p>
+                  {{ article.desc }}
+                </p>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
-  components: {},
+  async asyncData ({ $content, params }) {
+    const articles = await $content('blog', params.slug).only(['title', 'desc', 'image', 'slug']).sortBy('createdAt', 'asc').fetch()
+    return { articles }
+  },
   data () {
     return {
       skills: [
@@ -208,6 +236,10 @@ export default {
         {
           processTitle: 'Deployment',
           processDesc: 'Software deployment is all of the activities that make a software system available for use. The general deployment process consists of several interrelated activities with possible transitions between them. These activities can occur at the producer side or at the consumer side or both. Because every software system is unique, the precise processes or procedures within each activity can hardly be defined. Therefore, "deployment" should be interpreted as a general process that has to be customized according to specific requirements or characteristics.'
+        },
+        {
+          processTitle: 'Maintenance',
+          processDesc: 'Maintenance in software engineering is the modification of a software product after delivery to correct faults, to improve performance or other attributes. A common perception of maintenance is that it merely involves fixing defects. The key software maintenance issues are both managerial and technical. Key management issues are: alignment with customer priorities, staffing, which organization does maintenance, estimating costs. Key technical issues are: limited understanding, impact analysis, testing, maintainability measurement.'
         }
       ]
     }
@@ -318,5 +350,26 @@ export default {
 
 .section-process .section-title {
   margin-bottom: 2rem;
+}
+
+.section-blog {
+  background-color: #2d1948;
+}
+
+.blog-card .details {
+  background: #fff;
+  color: #1b0c30;
+  padding: 1rem;
+}
+.blog-card .details h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.blog-card img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 </style>
