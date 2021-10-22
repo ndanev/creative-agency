@@ -90,7 +90,7 @@
         </div>
       </div>
     </section>
-    <section id="process" class="section section-process">
+    <section class="section section-process">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
@@ -342,7 +342,7 @@ export default {
   text-transform: uppercase;
 }
 
-.hero-title span {
+.hero-home-title span {
   color: #f33c7a;
 }
 
