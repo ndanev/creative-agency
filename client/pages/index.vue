@@ -3,7 +3,7 @@
     <div class="hero-home">
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-md-7 offset d-flex justify-content-center flex-column">
+          <div class="col-md-7 offset d-flex  justify-content-center flex-column">
             <h1 class="hero-title">
               Online <br> Creative
               <span>Agency</span>
@@ -23,7 +23,7 @@
     <section class="section section-about">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-left text-md-center">
             <h1 class="section-title">
               <span>
                 About Us
@@ -63,15 +63,8 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="(skill, index) in skills" :key="index" class="col-md-3">
-            <div class="skill-circle">
-              <div class="skill-circle-inner">
-                <div class="skill-circle-inner-progress">
-                  {{ skill.num }}
-                </div>
-              </div>
-              {{ skill.skillTitle }}
-            </div>
+          <div v-for="(skill, index) in skills" :key="index" class="col-6 col-md-4">
+            <SkillCard :skillTitle="skill.title" :skillImage="skill.image" />
           </div>
         </div>
       </div>
@@ -112,7 +105,7 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="(process, index) in workProcess" :key="index" class="col-md-4">
+          <div v-for="(process, index) in workProcess" :key="index" class="col-12 col-sm-6 col-md-4">
             <ProcessCard :processTitle="process.processTitle" :processDesc="process.processDesc" />
           </div>
         </div>
@@ -131,7 +124,7 @@
         </div>
         <div class="row">
           <div v-for="(article, index) in articles" :key="index" class="col-md-4">
-            <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card">
+            <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card mb-3 mb-md-0">
               <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid">
               <div class="details">
                 <h3>
@@ -159,19 +152,33 @@ export default {
     return {
       skills: [
         {
-          skillTitle: '7 Years on Business',
+          title: 'HTML',
+          image: require('@/assets/images/html.png'),
           num: '7'
         },
         {
-          skillTitle: 'Top 10 on web',
+          title: 'CSS',
+          image: require('@/assets/images/css.png'),
           num: '10'
         },
         {
-          skillTitle: 'Completed Projects',
+          title: 'JavaScript',
+          image: require('@/assets/images/javascript.png'),
           num: '250'
         },
         {
-          skillTitle: 'Happy Clients',
+          title: 'Vue.js',
+          image: require('@/assets/images/vuejs.jpg'),
+          num: '98%'
+        },
+        {
+          title: 'Bootstrap',
+          image: require('@/assets/images/bootstrap.png'),
+          num: '98%'
+        },
+        {
+          title: 'Node.js',
+          image: require('@/assets/images/nodejs-logo.png'),
           num: '98%'
         }
       ],
@@ -261,7 +268,7 @@ export default {
   background-image: url("@/assets/images/hero-home.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 30px - 85px);
   width: 100%;
 }
 
@@ -307,35 +314,6 @@ export default {
 
 .section-skills .section-title {
   margin-bottom: 2rem;
-}
-
-.skill-circle {
-  text-align: center;
-  color: #fff;
-  font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.skill-circle-inner {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.skill-circle-inner-progress {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: #fff;
 }
 
 .section-works {
@@ -385,6 +363,16 @@ export default {
 @media (max-width: 991px) {
   .hero-home {
     background-position: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-lead {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
   }
 }
 </style>

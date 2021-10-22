@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{header_bg: scrollPosition > 200}">
+  <header class="header" :class="{header_fixed: scrollPosition > 0}">
     <div class="container-fluid">
       <nav>
         <div class="logo">
@@ -52,33 +52,33 @@
         <transition name="slide-fade" class="mobile-nav">
           <ul v-show="mobileNav" class="dropdown-nav">
             <li class="header-list-item">
-              <nuxt-link to="/">
-                Home
+              <nuxt-link to="/" @click.native="closeMenu()">
+                Home <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
             <li class="header-list-item">
-              <nuxt-link to="/about">
-                About
+              <nuxt-link to="/about" @click.native="closeMenu()">
+                About <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
             <li class="header-list-item">
-              <nuxt-link to="/work">
-                Work
+              <nuxt-link to="/work" @click.native="closeMenu()">
+                Work <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
             <li class="header-list-item">
-              <nuxt-link to="/#process">
-                Process
+              <nuxt-link to="/#process" @click.native="closeMenu()">
+                Process <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
             <li class="header-list-item">
-              <nuxt-link to="/services">
-                Services
+              <nuxt-link to="/services" @click.native="closeMenu()">
+                Services <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
             <li class="header-list-item">
-              <nuxt-link to="/contact">
-                Contact
+              <nuxt-link to="/contact" @click.native="closeMenu()">
+                Contact <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
           </ul>
@@ -125,6 +125,9 @@ export default {
         this.mobileNav = false
         this.desktopNav = true
       }
+    },
+    closeMenu () {
+      this.mobileNav = false
     }
   }
 }
@@ -132,15 +135,16 @@ export default {
 
 <style>
 header {
+  width: 100%;
+  background-color: rgba(45, 25, 72, 1);
+  transition: all .25s ease-in-out;
+}
+
+.header_fixed {
   position: fixed;
   top: 30px;
   left: 0;
-  width: 100%;
   z-index: 3;
-}
-
-.header_bg {
-  background-color: rgba(45, 25, 72, 1);
 }
 
 a {
@@ -256,11 +260,20 @@ header nav {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 9;
   width: 100%;
   max-width: 275px;
   height: 100%;
   background-color: #1b0c30;
   transition: all .25s ease-in-out;
+}
+
+.dropdown-nav .header-list-item {
+  border-bottom: 1px solid #705096;
+}
+
+.dropdown-nav .header-list-item:first-child {
+    border-top: 1px solid #705096;
 }
 
 .dropdown-nav a {
@@ -283,7 +296,13 @@ header nav {
   transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .slide-fade-enter, .slide-fade-leave-to {
-  transform: translateX(10px);
+  transform: translateX(-10px);
   opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .logo-link {
+    padding: 1rem 0;
+  }
 }
 </style>

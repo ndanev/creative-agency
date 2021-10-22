@@ -86,5 +86,9 @@ html {
   .section {
     padding: 40px 0;
   }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
 }
 </style>

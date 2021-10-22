@@ -35,4 +35,18 @@ export default {}
   width: 50px;
   height: 50px;
 }
+
+@media (max-width: 767px) {
+  .email-me {
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .email-me img {
+    width: 30px;
+    height: 30px;
+  }
+}
 </style>

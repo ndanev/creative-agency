@@ -1,5 +1,5 @@
 <template>
-  <div class="header-top">
+  <div class="header-top" :class="{header_top_fixed: scrollPosition > 0}">
     <div class="container-fluid">
       <div class="d-flex align-items-center justify-content-between">
         <h1>
@@ -17,26 +17,45 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'HeaderTop',
+  data () {
+    return {
+      scrollPosition: null
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.updateScroll)
+  },
+  methods: {
+    updateScroll () {
+      this.scrollPosition = window.scrollY
+    }
+  }
+}
 </script>
 
 <style>
 .header-top {
     padding: 0 1rem;
     background-color: rgba(27, 12, 48, 1);
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 30px;
-    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all .25s ease-in-out;
+}
+
+.header_top_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .header-top h1 span {
-    color: #f33c7a;
+  color: #f33c7a;
 }
 
 .header-top h1 {
@@ -53,6 +72,12 @@ export default {}
 .header-top a {
     color: #fff;
     font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .header-top {
+    padding: 0;
+  }
 }
 
 @media (max-width: 450px) {
