@@ -81,4 +81,10 @@ html {
   color: #fff;
   font-size: 1.2rem;
 }
+
+@media (max-width: 767px) {
+  .section {
+    padding: 40px 0;
+  }
+}
 </style>

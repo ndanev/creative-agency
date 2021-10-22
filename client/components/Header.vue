@@ -10,7 +10,7 @@
             <span>Agency</span>
           </nuxt-link>
         </div>
-        <ul class="header-list">
+        <ul v-show="desktopNav" class="header-list">
           <li class="header-list-item">
             <nuxt-link class="header-list-link" to="/">
               Home
@@ -27,7 +27,7 @@
             </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="#process">
+            <nuxt-link class="header-list-link" to="/#process">
               Process
             </nuxt-link>
           </li>
@@ -37,16 +37,52 @@
             </nuxt-link>
           </li>
           <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/testimonials">
-              Testimonials
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
             <nuxt-link class="header-list-link" to="/contact">
               Contact
             </nuxt-link>
           </li>
         </ul>
+        <div v-show="mobile" class="menu-icon">
+          <i
+            class="fas fa-bars"
+            :class="{'fas fa-times': mobileNav}"
+            @click="toggleMobileNav"
+          />
+        </div>
+        <transition name="slide-fade" class="mobile-nav">
+          <ul v-show="mobileNav" class="dropdown-nav">
+            <li class="header-list-item">
+              <nuxt-link to="/">
+                Home
+              </nuxt-link>
+            </li>
+            <li class="header-list-item">
+              <nuxt-link to="/about">
+                About
+              </nuxt-link>
+            </li>
+            <li class="header-list-item">
+              <nuxt-link to="/work">
+                Work
+              </nuxt-link>
+            </li>
+            <li class="header-list-item">
+              <nuxt-link to="/#process">
+                Process
+              </nuxt-link>
+            </li>
+            <li class="header-list-item">
+              <nuxt-link to="/services">
+                Services
+              </nuxt-link>
+            </li>
+            <li class="header-list-item">
+              <nuxt-link to="/contact">
+                Contact
+              </nuxt-link>
+            </li>
+          </ul>
+        </transition>
       </nav>
     </div>
   </header>
@@ -58,8 +94,16 @@ export default {
   components: {},
   data () {
     return {
-      scrollPosition: null
+      scrollPosition: null,
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
+      desktopNav: true
     }
+  },
+  beforeMount () {
+    window.addEventListener('resize', this.checkScreen)
+    this.checkScreen()
   },
   mounted () {
     window.addEventListener('scroll', this.updateScroll)
@@ -67,6 +111,20 @@ export default {
   methods: {
     updateScroll () {
       this.scrollPosition = window.scrollY
+    },
+    toggleMobileNav () {
+      this.mobileNav = !this.mobileNav
+    },
+    checkScreen () {
+      this.windowWidth = window.innerWidth
+      if (this.windowWidth <= 991) {
+        this.mobile = true
+        this.desktopNav = false
+      } else {
+        this.mobile = false
+        this.mobileNav = false
+        this.desktopNav = true
+      }
     }
   }
 }
@@ -82,7 +140,6 @@ header {
 }
 
 .header_bg {
-  /* background-color: #2d1948; */
   background-color: rgba(45, 25, 72, 1);
 }
 
@@ -106,6 +163,10 @@ header nav {
 
 .header-list {
   margin-bottom: 0;
+}
+
+.logo {
+  z-index: 10;
 }
 
 .logo-link {
@@ -177,5 +238,52 @@ header nav {
   background-color: #f33c7a;
   z-index: 1;
   margin: 0 auto;
+}
+
+.menu-icon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.dropdown-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 275px;
+  height: 100%;
+  background-color: #1b0c30;
+  transition: all .25s ease-in-out;
+}
+
+.dropdown-nav a {
+  color: #fff;
+  padding: 15px 15px 15px 30px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all .25s ease-in-out;
+}
+
+.dropdown-nav a:hover, .dropdown-nav a:active, .dropdown-nav a:focus {
+  color: #f33c7a;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

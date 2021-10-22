@@ -29,6 +29,10 @@ export default {
   position: relative;
 }
 
+.work-card img {
+  width: 100%;
+}
+
 .work-card-info {
   position: absolute;
   top: 0;

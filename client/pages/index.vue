@@ -381,4 +381,10 @@ export default {
   width: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 991px) {
+  .hero-home {
+    background-position: 75%;
+  }
+}
 </style>

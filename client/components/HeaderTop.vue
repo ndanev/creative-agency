@@ -5,14 +5,6 @@
         <h1>
           Web Design & <span>Development</span>
         </h1>
-        <!-- <div>
-          <a href="https://www.linkedin.com/in/nemanjadanev/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/ndanev?tab=repositories" target="_blank">
-            <i class="fab fa-github-square"></i>
-          </a>
-        </div> -->
         <div>
           <i class="fas fa-phone-alt" />
           <a href="tel:4373283418">
@@ -61,5 +53,19 @@ export default {}
 .header-top a {
     color: #fff;
     font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .header-top a {
+    font-size: .7rem;
+  }
+
+  .header-top i {
+    font-size: .7rem;
+  }
+
+  .header-top h1 {
+    font-size: .7rem;
+  }
 }
 </style>

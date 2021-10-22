@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'client',
+    title: 'Creative Agency',
     htmlAttrs: {
       lang: 'en'
     },
@@ -43,6 +43,10 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
   ],
+
+  bootstrapVue: {
+    icons: true
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
