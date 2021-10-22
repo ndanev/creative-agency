@@ -4,7 +4,7 @@
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-7 offset d-flex  justify-content-center flex-column">
-            <h1 class="hero-title">
+            <h1 class="hero-home-title">
               Online <br> Creative
               <span>Agency</span>
             </h1>
@@ -112,12 +112,12 @@
       </div>
     </section>
     <section class="section section-blog">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center">
             <h1 class="section-title">
               <span>
-                Latest Posts
+                Latest Blogs
               </span>
             </h1>
           </div>
@@ -335,7 +335,7 @@ export default {
   width: 100%;
 }
 
-.hero-title {
+.hero-home-title {
   color: #ffffff;
   font-size: 4rem;
   font-weight: bold;
@@ -390,11 +390,30 @@ export default {
   background-color: #2d1948;
 }
 
-.blog-card .details {
-  background: #fff;
-  color: #1b0c30;
-  padding: 1rem;
+.blog-card {
+  position: relative;
 }
+
+.blog-card .details {
+  background: rgba(45, 25, 72, .6);
+  color: #fff;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.blog-card .details:hover {
+  background: rgba(45, 25, 72, .8);
+  text-decoration: underline;
+}
+
 .blog-card .details h3 {
   font-weight: bold;
   font-size: 1.2rem;
@@ -402,9 +421,10 @@ export default {
 }
 
 .blog-card img {
-  height: 150px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .section-contact {

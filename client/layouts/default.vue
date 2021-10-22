@@ -101,6 +101,16 @@ html {
   background-color: #fff;
 }
 
+.hero {
+  background-color: rgba(45, 25, 72, 1);
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 3rem;
+  padding: 80px 0;
+}
+
 @media (max-width: 767px) {
   .section {
     padding: 40px 0;

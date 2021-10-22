@@ -25,6 +25,7 @@ export default {}
     justify-content: center;
     border: 4px solid #fff;
     transition: all .25s ease-in-out;
+    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
 }
 
 .email-me:hover, .email-me:focus, .email-me:active {

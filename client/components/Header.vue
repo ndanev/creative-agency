@@ -117,7 +117,7 @@ header {
 }
 
 .header_fixed {
-  position: fixed;
+  position: sticky;
   top: 30px;
   left: 0;
   z-index: 3;

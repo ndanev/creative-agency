@@ -48,7 +48,7 @@ export default {
 }
 
 .header_top_fixed {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 3;
