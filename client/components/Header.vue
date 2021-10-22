@@ -59,8 +59,8 @@ export default {
           route: 'about'
         },
         {
-          name: 'Skills',
-          route: 'skills'
+          name: 'Works',
+          route: 'works'
         },
         {
           name: 'Process',

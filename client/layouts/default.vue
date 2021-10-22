@@ -93,10 +93,12 @@ html {
   background-color: #f33c7a;
   color: #fff;
   border: 0;
+  transition: all .25s;
 }
 
 .button-primary:hover {
-  color: #fff;
+  color: #f33c7a;
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {
