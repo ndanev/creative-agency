@@ -17,7 +17,7 @@ export default {
 * {
   padding: 0;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -80,6 +80,23 @@ html {
 .section-lead {
   color: #fff;
   font-size: 1.2rem;
+}
+
+.button {
+  padding: 20px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  background-color: #f33c7a;
+  color: #fff;
+  border: 0;
+}
+
+.button-primary:hover {
+  color: #fff;
 }
 
 @media (max-width: 767px) {

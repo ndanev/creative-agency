@@ -8,9 +8,6 @@
         {{ processDesc }}
       </div>
     </div>
-    <div class="process-card-icon">
-      <!-- <i class="far fa-gem" /> -->
-    </div>
   </article>
 </template>
 

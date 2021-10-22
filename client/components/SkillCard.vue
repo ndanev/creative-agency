@@ -28,7 +28,7 @@ export default {
 .skill-card {
   text-align: center;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +41,7 @@ export default {
   height: 175px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  background: #2d1948;
 }
 
 .skill-card-inner-progress {
@@ -56,9 +57,14 @@ export default {
 }
 
 .skill-card-inner-progress img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    transition: all .85s;
+}
+
+.skill-card-inner-progress img:hover {
+    transform: rotateY(360deg);
 }
 
 @media (max-width: 767px) {
@@ -69,6 +75,15 @@ export default {
 
     .skill-card {
         margin-bottom: 1.4rem;
+    }
+
+    .skill-card-inner-progress {
+        border: 0;
+    }
+
+    .skill-card-inner-progress img {
+        width: 100%;
+        height: 100%;
     }
 }
 </style>
