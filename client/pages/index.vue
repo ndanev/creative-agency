@@ -96,7 +96,7 @@
           <div class="col-md-6 text-center">
             <h1 class="section-title">
               <span>
-                Our Work Process
+                Work Process
               </span>
             </h1>
             <p class="section-lead">

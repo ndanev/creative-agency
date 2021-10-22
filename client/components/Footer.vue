@@ -22,7 +22,7 @@ export default {}
 
 <style>
 .footer {
-  background-color: #1b0c30;
+  background-color: rgba(45, 25, 72, 1);
   padding: 1rem 0;
 }
 

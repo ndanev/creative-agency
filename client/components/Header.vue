@@ -11,34 +11,9 @@
           </nuxt-link>
         </div>
         <ul v-show="desktopNav" class="header-list">
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/">
-              Home
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/about">
-              About
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/work">
-              Work
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/#process">
-              Process
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/services">
-              Services
-            </nuxt-link>
-          </li>
-          <li class="header-list-item">
-            <nuxt-link class="header-list-link" to="/contact">
-              Contact
+          <li v-for="(link, index) in headerLinks" :key="index" class="header-list-item">
+            <nuxt-link class="header-list-link" :to="'/'+link.route">
+              {{ link.name }}
             </nuxt-link>
           </li>
         </ul>
@@ -51,34 +26,9 @@
         </div>
         <transition name="slide-fade" class="mobile-nav">
           <ul v-show="mobileNav" class="dropdown-nav">
-            <li class="header-list-item">
-              <nuxt-link to="/" @click.native="closeMenu()">
-                Home <b-icon icon="arrow-right-short" />
-              </nuxt-link>
-            </li>
-            <li class="header-list-item">
-              <nuxt-link to="/about" @click.native="closeMenu()">
-                About <b-icon icon="arrow-right-short" />
-              </nuxt-link>
-            </li>
-            <li class="header-list-item">
-              <nuxt-link to="/work" @click.native="closeMenu()">
-                Work <b-icon icon="arrow-right-short" />
-              </nuxt-link>
-            </li>
-            <li class="header-list-item">
-              <nuxt-link to="/#process" @click.native="closeMenu()">
-                Process <b-icon icon="arrow-right-short" />
-              </nuxt-link>
-            </li>
-            <li class="header-list-item">
-              <nuxt-link to="/services" @click.native="closeMenu()">
-                Services <b-icon icon="arrow-right-short" />
-              </nuxt-link>
-            </li>
-            <li class="header-list-item">
-              <nuxt-link to="/contact" @click.native="closeMenu()">
-                Contact <b-icon icon="arrow-right-short" />
+            <li v-for="(link, index) in headerLinks" :key="index" class="header-list-item">
+              <nuxt-link :to="'/'+link.route" @click.native="closeMenu()">
+                {{ link.name }} <b-icon icon="arrow-right-short" />
               </nuxt-link>
             </li>
           </ul>
@@ -98,7 +48,33 @@ export default {
       mobile: null,
       mobileNav: null,
       windowWidth: null,
-      desktopNav: true
+      desktopNav: true,
+      headerLinks: [
+        {
+          name: 'Home',
+          route: ''
+        },
+        {
+          name: 'About',
+          route: 'about'
+        },
+        {
+          name: 'Skills',
+          route: 'skills'
+        },
+        {
+          name: 'Process',
+          route: 'process'
+        },
+        {
+          name: 'Blogs',
+          route: 'blogs'
+        },
+        {
+          name: 'Contact',
+          route: 'contact'
+        }
+      ]
     }
   },
   beforeMount () {
@@ -224,7 +200,7 @@ header nav {
   position: absolute;
   content: "";
   left: 1rem;
-  bottom: 0;
+  bottom: 10px;
   width: 50%;
   height: 4px;
   background-color: #f33c7a;
