@@ -2,21 +2,21 @@
   <article class="skill-card">
     <div class="skill-card-inner">
       <div class="skill-card-inner-progress">
-        <img :src="skillImage" alt>
+        <img :src="image" alt>
       </div>
     </div>
-    {{ skillTitle }}
+    {{ title }}
   </article>
 </template>
 
 <script>
 export default {
   props: {
-    skillTitle: {
+    title: {
       type: String,
       required: true
     },
-    skillImage: {
+    image: {
       type: String,
       required: true
     }

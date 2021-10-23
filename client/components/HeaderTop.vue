@@ -7,7 +7,7 @@
         </h1>
         <div>
           <i class="fas fa-phone-alt" />
-          <a href="tel:4373283418">
+          <a href="tel:+4373283418">
             (437) 328-3418
           </a>
         </div>

@@ -2,10 +2,10 @@
   <article class="process-card">
     <div>
       <div class="process-card-title">
-        {{ processTitle }} <i class="fas fa-long-arrow-alt-right" />
+        {{ title }} <i class="fas fa-long-arrow-alt-right" />
       </div>
       <div class="process-card-des">
-        {{ processDesc }}
+        {{ desc }}
       </div>
     </div>
   </article>
@@ -14,11 +14,11 @@
 <script>
 export default {
   props: {
-    processTitle: {
+    title: {
       type: String,
       required: true
     },
-    processDesc: {
+    desc: {
       type: String,
       required: true
     }
