@@ -483,5 +483,9 @@ export default {
   .hero-home-title {
     font-size: 2.6rem;
   }
+
+  .column {
+    padding: 5px 10px;
+  }
 }
 </style>

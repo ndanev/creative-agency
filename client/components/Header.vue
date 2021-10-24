@@ -17,11 +17,11 @@
             </nuxt-link>
           </li>
         </ul>
-        <div v-show="mobile" class="menu-icon">
+        <div v-show="mobile" class="menu-icon" @click="toggleMobileNav">
+          <span>Menu</span>
           <i
             class="fas fa-bars"
             :class="{'fas fa-times': mobileNav}"
-            @click="toggleMobileNav"
           />
         </div>
         <transition name="slide-fade" class="mobile-nav">
@@ -227,6 +227,11 @@ header nav {
   justify-content: center;
   cursor: pointer;
   font-size: 1.6rem;
+}
+
+.menu-icon span {
+  font-size: 1.2rem;
+  margin-right: .5rem;
 }
 
 .dropdown-nav {

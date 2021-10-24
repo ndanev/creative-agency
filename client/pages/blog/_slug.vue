@@ -18,7 +18,7 @@
             <nuxt-content :document="article" class="single-blog" />
           </div>
         </div>
-        <div v-else class="row justify-content-center">
+        <div v-if="!article" class="row justify-content-center">
           <div class="col-md-8">
             Blog Not Found!
           </div>
