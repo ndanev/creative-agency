@@ -108,7 +108,11 @@ html {
 .hero-title {
   color: #fff;
   font-size: 3rem;
-  padding: 80px 0;
+  padding: 40px 0;
+}
+
+.hero-title span {
+  color: #f33c7a;
 }
 
 @media (max-width: 767px) {
@@ -118,6 +122,10 @@ html {
 
   .section-title {
     margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
   }
 }
 </style>

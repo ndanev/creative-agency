@@ -73,6 +73,10 @@ export default {
         {
           name: 'Contact',
           route: 'contact'
+        },
+        {
+          name: 'Covid-19',
+          route: 'covid'
         }
       ]
     }
@@ -183,6 +187,24 @@ header nav {
   margin-left: -40px;
 }
 
+.header-list-item:last-child {
+  position: relative;
+}
+
+.header-list-item:last-child::before {
+  content: 'New';
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  background-color: #f33c7a;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: .4rem;
+  font-weight: bold;
+}
+
 .header-list-link {
   padding: 1rem;
   text-transform: uppercase;
@@ -279,6 +301,13 @@ header nav {
 .slide-fade-enter, .slide-fade-leave-to {
   transform: translateX(-10px);
   opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .header-list-item:last-child::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 @media (max-width: 767px) {
