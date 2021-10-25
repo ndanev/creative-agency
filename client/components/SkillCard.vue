@@ -5,7 +5,14 @@
         <img :src="image" alt>
       </div>
     </div>
-    {{ title }}
+    <div class="skill-card-title mb-3">
+      <b>
+        {{ title }}
+      </b>
+    </div>
+    <div class="skill-card-content">
+      {{ desc }}
+    </div>
   </article>
 </template>
 
@@ -17,6 +24,10 @@ export default {
       required: true
     },
     image: {
+      type: String,
+      required: true
+    },
+    desc: {
       type: String,
       required: true
     }
@@ -65,6 +76,10 @@ export default {
 
 .skill-card-inner-progress img:hover {
     transform: rotateY(360deg);
+}
+
+.skill-card-content {
+  font-size: .9rem;
 }
 
 @media (max-width: 767px) {

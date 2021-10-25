@@ -63,8 +63,8 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="(skill, index) in skills" :key="index" class="col-6 col-md-4">
-            <SkillCard :title="skill.title" :image="skill.image" />
+          <div v-for="(skill, index) in skills" :key="index" class="col-md-4">
+            <SkillCard :title="skill.title" :image="skill.image" :desc="skill.desc" />
           </div>
         </div>
       </div>
@@ -211,38 +211,38 @@ export default {
         {
           title: 'HTML',
           image: require('@/assets/images/html.png'),
-          num: '7'
+          desc: 'The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.'
         },
         {
           title: 'CSS',
           image: require('@/assets/images/css.png'),
-          num: '10'
+          desc: 'Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.'
         },
         {
           title: 'JavaScript',
           image: require('@/assets/images/javascript.png'),
-          num: '250'
+          desc: 'JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.'
         },
         {
           title: 'Vue.js',
           image: require('@/assets/images/vuejs.jpg'),
-          num: '98%'
+          desc: 'Vue.js (commonly referred to as Vue; pronounced /vjuː/, like "view") is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.'
         },
         {
           title: 'Bootstrap',
           image: require('@/assets/images/bootstrap.png'),
-          num: '98%'
+          desc: 'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.'
         },
         {
           title: 'Node.js',
           image: require('@/assets/images/nodejs-logo.png'),
-          num: '98%'
+          desc: 'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the users web browser.'
         }
       ],
       works: [
         {
           id: 1,
-          workTitle: 'Project 1',
+          workTitle: 'Joobloop',
           project_gh_link: '',
           img: require('@/assets/images/work-1.png')
         },
@@ -333,7 +333,7 @@ export default {
 
 <style>
 .hero-home {
-  background-image: url("@/assets/images/hero-home.png");
+  background-image: url("@/assets/images/hero-home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 30px - 85px);
