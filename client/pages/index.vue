@@ -242,15 +242,15 @@ export default {
       works: [
         {
           id: 1,
-          workTitle: 'Joobloop',
+          workTitle: 'Creative Agency',
           project_gh_link: '',
-          img: require('@/assets/images/work-1.png')
+          img: require('@/assets/images/creative-agency.jpg')
         },
         {
           id: 2,
-          workTitle: 'Project 2',
+          workTitle: 'Job Loop',
           project_gh_link: '',
-          img: require('@/assets/images/work-2.png')
+          img: require('@/assets/images/jobloop.jpg')
         },
         {
           id: 3,

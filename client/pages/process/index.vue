@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="(skill, index) in skills" :key="index" class="col-6 col-md-4">
+          <div v-for="(skill, index) in skills" :key="index" class="col-md-4">
             <SkillCard :title="skill.title" :image="skill.image" :desc="skill.desc" />
           </div>
         </div>
