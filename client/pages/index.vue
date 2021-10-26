@@ -256,45 +256,17 @@ export default {
         },
         {
           id: 3,
+          workTitle: 'Github User Finder',
+          gitLink: 'https://github.com/ndanev/user-finder',
+          website: 'https://online-user-finder.netlify.app/',
+          img: require('@/assets/images/user-finder.jpg')
+        },
+        {
+          id: 4,
           workTitle: 'Natural Tasty',
           gitLink: 'https://github.com/ndanev/Tastyland-Website',
           website: 'https://tastyland-website.netlify.app/',
           img: require('@/assets/images/tastyland.jpg')
-        },
-        {
-          id: 4,
-          workTitle: 'Project 4',
-          gitLink: '',
-          website: '',
-          img: require('@/assets/images/work-4.png')
-        },
-        {
-          id: 5,
-          workTitle: 'Project 5',
-          gitLink: '',
-          website: '',
-          img: require('@/assets/images/work-5.png')
-        },
-        {
-          id: 6,
-          workTitle: 'Project 6',
-          gitLink: '',
-          website: '',
-          img: require('@/assets/images/work-6.png')
-        },
-        {
-          id: 7,
-          workTitle: 'Project 7',
-          gitLink: '',
-          website: '',
-          img: require('@/assets/images/work-7.png')
-        },
-        {
-          id: 8,
-          workTitle: 'Project 8',
-          gitLink: '',
-          website: '',
-          img: require('@/assets/images/work-8.png')
         }
       ],
       workProcess: [
