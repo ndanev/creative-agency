@@ -2,8 +2,12 @@
   <article class="work-card">
     <img :src="image" alt>
     <div class="work-card-info">
-      <div class="work-card-title">
+      <div class="work-card-title mb-3">
         {{ title }}
+      </div>
+      <div class="work-card-link">
+        <a :href="link" target="_blank">Github link</a>
+        <a v-if="website !== ''" :href="website" target="_blank">Website</a>
       </div>
     </div>
   </article>
@@ -17,6 +21,14 @@ export default {
       required: true
     },
     image: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
+      required: true
+    },
+    website: {
       type: String,
       required: true
     }
@@ -44,11 +56,28 @@ export default {
   display: none;
   align-items: center;
   justify-content: center;
-  transition: all .25s ease-in-out;
+}
+
+.work-card-title {
+  font-weight: bold;
 }
 
 .work-card:hover > .work-card-info {
   display: flex;
+  flex-direction: column;
+}
+
+.work-card-link {
+  display: flex;
+}
+
+.work-card-link a {
+  display: block;
+  color: #fff;
+  background-color: #f33c7a;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {

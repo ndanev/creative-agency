@@ -85,7 +85,7 @@
         </div>
         <div class="row justify-content-center">
           <div v-for="work in works" :key="work.id" class="column">
-            <WorkCard :title="work.workTitle" :image="work.img" />
+            <WorkCard :title="work.workTitle" :image="work.img" :link="work.gitLink" :website="work.website" />
           </div>
         </div>
       </div>
@@ -243,49 +243,57 @@ export default {
         {
           id: 1,
           workTitle: 'Creative Agency',
-          project_gh_link: '',
+          gitLink: 'https://github.com/ndanev/creative-agency',
+          website: '',
           img: require('@/assets/images/creative-agency.jpg')
         },
         {
           id: 2,
           workTitle: 'Job Loop',
-          project_gh_link: '',
+          gitLink: 'https://github.com/ndanev/JobLoop',
+          website: '',
           img: require('@/assets/images/jobloop.jpg')
         },
         {
           id: 3,
-          workTitle: 'Project 3',
-          project_gh_link: '',
-          img: require('@/assets/images/work-3.png')
+          workTitle: 'Natural Tasty',
+          gitLink: 'https://github.com/ndanev/Tastyland-Website',
+          website: 'https://tastyland-website.netlify.app/',
+          img: require('@/assets/images/tastyland.jpg')
         },
         {
           id: 4,
           workTitle: 'Project 4',
-          project_gh_link: '',
+          gitLink: '',
+          website: '',
           img: require('@/assets/images/work-4.png')
         },
         {
           id: 5,
           workTitle: 'Project 5',
-          project_gh_link: '',
+          gitLink: '',
+          website: '',
           img: require('@/assets/images/work-5.png')
         },
         {
           id: 6,
           workTitle: 'Project 6',
-          project_gh_link: '',
+          gitLink: '',
+          website: '',
           img: require('@/assets/images/work-6.png')
         },
         {
           id: 7,
           workTitle: 'Project 7',
-          project_gh_link: '',
+          gitLink: '',
+          website: '',
           img: require('@/assets/images/work-7.png')
         },
         {
           id: 8,
           workTitle: 'Project 8',
-          project_gh_link: '',
+          gitLink: '',
+          website: '',
           img: require('@/assets/images/work-8.png')
         }
       ],
