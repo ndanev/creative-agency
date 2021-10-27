@@ -84,8 +84,10 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div v-for="work in works" :key="work.id" class="column">
-            <WorkCard :title="work.workTitle" :image="work.img" :link="work.gitLink" :website="work.website" />
+          <div v-for="work in works" :key="work.id" class="col-md-3">
+            <nuxt-link to="/works">
+              <WorkCard :title="work.workTitle" :image="work.img" />
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -243,29 +245,21 @@ export default {
         {
           id: 1,
           workTitle: 'Creative Agency',
-          gitLink: 'https://github.com/ndanev/creative-agency',
-          website: '',
           img: require('@/assets/images/creative-agency.jpg')
         },
         {
           id: 2,
           workTitle: 'Job Loop',
-          gitLink: 'https://github.com/ndanev/JobLoop',
-          website: '',
           img: require('@/assets/images/jobloop.jpg')
         },
         {
           id: 3,
           workTitle: 'Github User Finder',
-          gitLink: 'https://github.com/ndanev/user-finder',
-          website: 'https://online-user-finder.netlify.app/',
           img: require('@/assets/images/user-finder.jpg')
         },
         {
           id: 4,
           workTitle: 'Natural Tasty',
-          gitLink: 'https://github.com/ndanev/Tastyland-Website',
-          website: 'https://tastyland-website.netlify.app/',
           img: require('@/assets/images/tastyland.jpg')
         }
       ],
@@ -305,7 +299,7 @@ export default {
   },
   methods: {
     sendMessage () {
-      alert('Coming Soon...')
+      alert('Functionality coming soon...')
     }
   }
 }
@@ -354,10 +348,6 @@ export default {
 
 .section-works .section-title {
   margin-bottom: 2rem;
-}
-
-.column {
-  padding: 5px;
 }
 
 .section-process {
@@ -462,10 +452,6 @@ export default {
 
   .hero-home-title {
     font-size: 2.6rem;
-  }
-
-  .column {
-    padding: 5px 10px;
   }
 }
 </style>

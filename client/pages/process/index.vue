@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="process">
     <div class="hero">
       <div class="container">
         <div class="row">

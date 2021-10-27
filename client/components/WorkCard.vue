@@ -1,13 +1,9 @@
 <template>
   <article class="work-card">
-    <img :src="image" alt>
+    <img :src="image" alt class="img-fluid">
     <div class="work-card-info">
       <div class="work-card-title mb-3">
         {{ title }}
-      </div>
-      <div class="work-card-link">
-        <a :href="link" target="_blank">Github link</a>
-        <a v-if="website !== ''" :href="website" target="_blank">Website</a>
       </div>
     </div>
   </article>
@@ -23,14 +19,6 @@ export default {
     image: {
       type: String,
       required: true
-    },
-    link: {
-      type: String,
-      required: true
-    },
-    website: {
-      type: String,
-      required: true
     }
   }
 }
@@ -39,50 +27,46 @@ export default {
 <style>
 .work-card {
   position: relative;
+  transition: all .25s;
+}
+
+.work-card:hover {
+  transform: scale(1.02);
 }
 
 .work-card img {
   width: 100%;
-}
-
-.work-card-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0,0,0,.7);
-  color: #fff;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.work-card-title {
-  font-weight: bold;
+  max-width: 100%;
+  height: auto;
 }
 
 .work-card:hover > .work-card-info {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.work-card-link {
-  display: flex;
-}
-
-.work-card-link a {
-  display: block;
+.work-card-info {
+  background-color: rgba(27, 12, 48, .8);
   color: #fff;
-  background-color: #f33c7a;
-  border: 1px solid #fff;
-  padding: 10px;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.work-card-title {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 767px) {
   .work-card {
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
   }
 }
 </style>

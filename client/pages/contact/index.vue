@@ -64,7 +64,7 @@
 export default {
   methods: {
     sendMessage () {
-      alert('Coming Soon...')
+      alert('Functionality coming soon...')
     }
   }
 }
