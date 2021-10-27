@@ -29,10 +29,10 @@
                 <p class="project-desc">
                   {{ project.desc }}
                 </p>
-                <div class="mb-1">
+                <div v-if="project.githubLink" class="mb-1">
                   - <a :href="project.githubLink" class="project-link" target="_blank">Github Link <i class="fas fa-external-link-alt" /></a>
                 </div>
-                <div>
+                <div v-if="project.website">
                   - <a :href="project.website" class="project-link" target="_blank">Website <i class="fas fa-external-link-alt" /></a>
                 </div>
               </div>

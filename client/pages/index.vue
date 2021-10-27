@@ -244,23 +244,23 @@ export default {
       works: [
         {
           id: 1,
-          workTitle: 'Creative Agency',
-          img: require('@/assets/images/creative-agency.jpg')
-        },
-        {
-          id: 2,
           workTitle: 'Job Loop',
           img: require('@/assets/images/jobloop.jpg')
         },
         {
-          id: 3,
+          id: 2,
           workTitle: 'Github User Finder',
           img: require('@/assets/images/user-finder.jpg')
         },
         {
-          id: 4,
+          id: 3,
           workTitle: 'Natural Tasty',
           img: require('@/assets/images/tastyland.jpg')
+        },
+        {
+          id: 4,
+          workTitle: 'Creative Agency',
+          img: require('@/assets/images/creative-agency.jpg')
         }
       ],
       workProcess: [
