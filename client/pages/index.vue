@@ -12,9 +12,9 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum explicabo deleniti labore eius dolorum facilis minima itaque nihil, illo natus?
             </p>
             <div>
-              <nuxt-link class="button button-primary" to="/contact">
+              <a class="button button-primary" href="mailto:nemanja.danev.93@gmail.com">
                 Contact Us
-              </nuxt-link>
+              </a>
             </div>
           </div>
         </div>
