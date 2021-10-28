@@ -212,7 +212,7 @@ export default {
       skills: [
         {
           title: 'HTML',
-          image: require('@/assets/images/html.png'),
+          image: require('@/assets/images/html.jpg'),
           desc: 'The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.'
         },
         {
@@ -308,6 +308,7 @@ export default {
 <style>
 .hero-home {
   background-image: url("@/assets/images/hero-home.jpg");
+  background-color: rgba(45, 25, 72, 1);
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 30px - 85px);
@@ -351,7 +352,7 @@ export default {
 }
 
 .section-process {
-  background-image: url("@/assets/images/work-process-bg.png");
+  background-image: url("@/assets/images/work-process-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

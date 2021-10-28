@@ -101,6 +101,10 @@ export default {
   color: #f33c7a;
 }
 
+.project img {
+  border: 1px solid #d9d9d9;
+}
+
 .project-link {
   color: #2d1948;
   font-weight: bold;

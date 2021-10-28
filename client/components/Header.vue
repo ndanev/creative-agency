@@ -118,6 +118,7 @@ header {
   width: 100%;
   background-color: rgba(45, 25, 72, 1);
   transition: all .25s ease-in-out;
+    border-bottom: 1px solid #705096;
 }
 
 .header_fixed {
@@ -142,7 +143,6 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #705096;
 }
 
 .header-list {
