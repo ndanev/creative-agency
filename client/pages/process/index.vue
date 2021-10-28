@@ -24,11 +24,11 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Our Skills
               </span>
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis aut iste tenetur aliquam enim cupiditate dolore consequatur laborum labore assumenda repellat tempore, nam voluptatibus.
             </p>

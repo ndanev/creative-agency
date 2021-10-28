@@ -44,9 +44,9 @@
             <div class="text-center mb-3">
               {{ new Date(Date.now()).toLocaleString() }}
             </div>
-            <h1 class="section-title text-center mb-3">
+            <h2 class="section-title text-center mb-3">
               Country State
-            </h1>
+            </h2>
             <div v-if="message" class="text-center text-danger mb-3">
               Something went wrong!
             </div>

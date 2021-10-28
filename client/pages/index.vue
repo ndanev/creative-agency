@@ -4,10 +4,10 @@
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-7 offset d-flex  justify-content-center flex-column">
-            <h1 class="hero-home-title">
+            <h2 class="hero-home-title">
               Online <br> Creative
               <span>Agency</span>
-            </h1>
+            </h2>
             <p class="hero-lead mb-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum explicabo deleniti labore eius dolorum facilis minima itaque nihil, illo natus?
             </p>
@@ -24,11 +24,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-left text-md-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 About Us
               </span>
-            </h1>
+            </h2>
           </div>
         </div>
         <div class="row">
@@ -52,11 +52,11 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Our Skills
               </span>
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis aut iste tenetur aliquam enim cupiditate dolore consequatur laborum labore assumenda repellat tempore, nam voluptatibus.
             </p>
@@ -73,11 +73,11 @@
       <div class="container-fluid">
         <div class="row justify-content-center mb-5">
           <div class="col-md-4 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Our Works
               </span>
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
             </p>
@@ -96,11 +96,11 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Work Process
               </span>
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
             </p>
@@ -108,7 +108,7 @@
         </div>
         <div class="row">
           <div v-for="(process, index) in workProcess" :key="index" class="col-12 col-sm-6 col-md-4">
-            <ProcessCard :id="process.id" :title="process.title" :desc="process.desc" />
+            <ProcessCard :title="process.title" :desc="process.desc" />
           </div>
         </div>
       </div>
@@ -117,17 +117,17 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Latest Blogs
               </span>
-            </h1>
+            </h2>
           </div>
         </div>
         <div class="row">
           <div v-for="(article, index) in articles" :key="index" class="col-md-4">
             <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card mb-3 mb-md-0">
-              <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid">
+              <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid" alt>
               <div class="details">
                 <h3>
                   {{ article.title }}
@@ -145,11 +145,11 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-6 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               <span>
                 Contact
               </span>
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
             </p>
@@ -182,7 +182,7 @@
                 <div class="col-md-12">
                   <div class="form-colntrol">
                     <label>Your Message</label>
-                    <textarea id="" class="form-group w-100" name="" rows="10" />
+                    <textarea class="form-group w-100" rows="10" />
                   </div>
                 </div>
               </div>

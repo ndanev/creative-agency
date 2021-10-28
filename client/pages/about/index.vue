@@ -15,9 +15,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h1 class="section-title">
+            <h2 class="section-title">
               We are Creative Agnecy
-            </h1>
+            </h2>
             <p class="section-lead">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fuga necessitatibus voluptate, consequatur aliquam harum nostrum, vitae dolore ipsa placeat tempora nesciunt ab porro. Ipsum, veritatis earum voluptatibus dolores animi molestiae, itaque architecto delectus alias accusantium quisquam ratione, quis minima!
             </p>

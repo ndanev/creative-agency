@@ -41,7 +41,7 @@
                 <div class="col-md-12">
                   <div class="form-colntrol">
                     <label>Your Message</label>
-                    <textarea id="" class="form-group w-100" name="" rows="10" />
+                    <textarea class="form-group w-100" rows="10" />
                   </div>
                 </div>
               </div>

@@ -2,9 +2,9 @@
   <article class="work-card">
     <img :src="image" alt class="img-fluid">
     <div class="work-card-info">
-      <div class="work-card-title mb-3">
+      <h3 class="work-card-title mb-3">
         {{ title }}
-      </div>
+      </h3>
     </div>
   </article>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <article class="process-card">
     <div>
-      <div class="process-card-title">
+      <h3 class="process-card-title">
         {{ title }} <i class="fas fa-long-arrow-alt-right" />
-      </div>
+      </h3>
       <div class="process-card-des">
         {{ desc }}
       </div>

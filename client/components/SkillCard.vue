@@ -5,11 +5,9 @@
         <img :src="image" alt>
       </div>
     </div>
-    <div class="skill-card-title mb-3">
-      <b>
-        {{ title }}
-      </b>
-    </div>
+    <h3 class="skill-card-title mb-3">
+      {{ title }}
+    </h3>
     <div class="skill-card-content">
       {{ desc }}
     </div>
@@ -45,6 +43,11 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+}
+
+.skill-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .skill-card-inner {
