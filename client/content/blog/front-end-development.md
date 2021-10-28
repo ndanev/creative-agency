@@ -2,12 +2,12 @@
 title: Front end development
 desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 slug: front-end-development
-image: frontend-web-development.png
+image: frontend-web-development.jpg
 ---
 
 # Front end development
 
-![Front End Development](../../_nuxt/assets/images/frontend-web-development.png)
+![Front End Development](../../_nuxt/assets/images/frontend-web-development.jpg)
 
 Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.
 

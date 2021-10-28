@@ -1,7 +1,7 @@
 <template>
   <div class="email-me">
     <a class="d-block" href="mailto:nemanja.danev.93@gmail.com">
-      <img src="@/assets/images/gmail.png" alt>
+      <img src="@/assets/images/gmail.jpg" alt>
     </a>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {}
 
 .email-me img {
   width: 50px;
-  height: 50px;
+  height: 40px;
 }
 
 @media (max-width: 767px) {
@@ -47,7 +47,7 @@ export default {}
 
   .email-me img {
     width: 30px;
-    height: 30px;
+    height: 20px;
   }
 }
 </style>

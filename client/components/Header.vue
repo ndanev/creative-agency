@@ -212,6 +212,20 @@ header nav {
   color: #fff;
   position: relative;
   font-size: .9rem;
+  transition: all .25s;
+}
+
+.header-list-link.nuxt-link-exact-active.nuxt-link-active:before {
+  position: absolute;
+  content: "";
+  left: 1rem;
+  bottom: 10px;
+  width: 30%;
+  height: 4px;
+  background-color: #f33c7a;
+  z-index: 1;
+  margin: 0 auto;
+  transition: all .25s ease-in;
 }
 
 .header-list-link:hover {
