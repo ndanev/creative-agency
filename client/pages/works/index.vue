@@ -83,6 +83,18 @@ export default {
         }
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Our Works | Online Creative Agency',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Browse through our completed projects to get an idea of what we can do for you.'
+        }
+      ]
+    }
   }
 }
 </script>

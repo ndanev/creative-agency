@@ -113,6 +113,18 @@ export default {
         }
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Work process | Online Creative Agency',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.'
+        }
+      ]
+    }
   }
 }
 </script>

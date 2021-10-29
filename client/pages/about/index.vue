@@ -30,7 +30,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head () {
+    return {
+      title: 'About | Online Creative Agency',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>

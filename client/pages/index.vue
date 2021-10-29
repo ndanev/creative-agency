@@ -151,7 +151,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              If you have any question or you want to contact us, be free to send us an email. We’re here to help you!
+              If you have any question or you want to contact us, feel free to send us an email. We’re here to help you!
             </p>
           </div>
         </div>
@@ -293,6 +293,18 @@ export default {
           id: 6,
           title: 'Maintenance',
           desc: 'Maintenance in software engineering is the modification of a software product after delivery to correct faults, to improve performance or other attributes. A common perception of maintenance is that it merely involves fixing defects. The key software maintenance issues are both managerial and technical. Key management issues are: alignment with customer priorities, staffing, which organization does maintenance, estimating costs. Key technical issues are: limited understanding, impact analysis, testing, maintainability measurement.'
+        }
+      ]
+    }
+  },
+  head () {
+    return {
+      title: 'Online Creative Agency',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Looking for someone to realize your digital dreams? You’ve come to the right place!'
         }
       ]
     }

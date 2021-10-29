@@ -45,6 +45,18 @@ export default {
   async asyncData ({ $content, params }) {
     const articles = await $content('blog', params.slug).only(['title', 'desc', 'image', 'slug']).sortBy('createdAt', 'asc').fetch()
     return { articles }
+  },
+  head () {
+    return {
+      title: 'Blogs | Online Creative Agency',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.'
+        }
+      ]
+    }
   }
 }
 </script>
