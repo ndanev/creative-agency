@@ -416,11 +416,25 @@ export default {
 }
 
 .section-contact {
-  background-image: url("@/assets/images/home-contact-bg.png");
-  background-color: rgba(27, 12, 48, .8);
+  background-image: url("@/assets/images/contact-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.section-contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 12, 48, .35);
+  z-index: -1;
 }
 
 .section-contact .section-title {
