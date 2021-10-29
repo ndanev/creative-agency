@@ -81,10 +81,18 @@
                   <tr>
                     <td>{{ country.CountryCode }}</td>
                     <td>{{ country.Country }}</td>
-                    <td>{{ country.NewConfirmed }}</td>
-                    <td>{{ country.NewDeaths }}</td>
-                    <td>{{ country.TotalConfirmed }}</td>
-                    <td>{{ country.TotalDeaths }}</td>
+                    <td :class="[country.NewConfirmed > 0 ? 'text-green' : '']">
+                      <span v-if="country.NewConfirmed > 0"> + </span> {{ country.NewConfirmed }}
+                    </td>
+                    <td :class="[country.NewDeaths > 0 ? 'text-red' : '']">
+                      <span v-if="country.NewDeaths > 0"> + </span> {{ country.NewDeaths }}
+                    </td>
+                    <td class="text-blue">
+                      {{ country.TotalConfirmed }}
+                    </td>
+                    <td class="text-blue">
+                      {{ country.TotalDeaths }}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -141,5 +149,17 @@ export default {
 
 .covid .section-title {
     color: #212529;
+}
+
+.text-green {
+  color: #41B783;
+}
+
+.text-red {
+  color: #e95050;
+}
+
+.text-blue {
+  color:#6868dd;
 }
 </style>

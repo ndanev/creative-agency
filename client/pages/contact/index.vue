@@ -10,7 +10,7 @@
               </span>
             </h1>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
+              If you have any question or you want to contact us, be free to send us an email. We’re here to help you!
             </p>
           </div>
         </div>

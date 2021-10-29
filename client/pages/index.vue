@@ -9,7 +9,7 @@
               <span>Agency</span>
             </h2>
             <p class="hero-lead mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum explicabo deleniti labore eius dolorum facilis minima itaque nihil, illo natus?
+              Looking for someone to realize your digital dreams? You’ve come to the right place!
             </p>
             <div>
               <a class="button button-primary" href="mailto:nemanja.danev.93@gmail.com">
@@ -34,12 +34,12 @@
         <div class="row">
           <div class="col-md-6 d-flex flex-column justify-content-center">
             <h2 class="section-subtitle">
-              We are
+              We are a
               <br>
-              <span>Creative Agnecy</span>
+              <span>Creative Agency</span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fuga necessitatibus voluptate, consequatur aliquam harum nostrum, vitae dolore ipsa placeat tempora nesciunt ab porro. Ipsum, veritatis earum voluptatibus dolores animi molestiae, itaque architecto delectus alias accusantium quisquam ratione, quis minima!
+              With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.
             </p>
           </div>
           <div class="col-md-6 text-center">
@@ -58,7 +58,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis aut iste tenetur aliquam enim cupiditate dolore consequatur laborum labore assumenda repellat tempore, nam voluptatibus.
+              With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
+              Browse through our completed projects to get an idea of what we can do for you.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
+              Our clients peace of mind is our number one priority. We are a team and we will work together with you on every step of the way to bring your ideas to life.
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@
                   {{ article.title }}
                 </h3>
                 <p>
-                  {{ article.desc }}
+                  {{ article.desc.substring(0,120) }}...
                 </p>
               </div>
             </nuxt-link>
@@ -151,7 +151,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit fugit quasi laborum ut aut quisquam rem ipsum consectetur deserunt in!
+              If you have any question or you want to contact us, be free to send us an email. We’re here to help you!
             </p>
           </div>
         </div>

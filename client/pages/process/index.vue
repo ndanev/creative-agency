@@ -30,7 +30,7 @@
               </span>
             </h2>
             <p class="section-lead">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis aut iste tenetur aliquam enim cupiditate dolore consequatur laborum labore assumenda repellat tempore, nam voluptatibus.
+              With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 ---
 title: What is Node.js?
-desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+desc: Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 slug: what-is-nodejs
 image: nodejs.jpg
 ---

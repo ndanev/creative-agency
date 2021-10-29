@@ -29,7 +29,7 @@
                   {{ article.title }}
                 </h3>
                 <p>
-                  {{ article.desc }}
+                  {{ article.desc.substring(0,120) }}...
                 </p>
               </div>
             </nuxt-link>
