@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="row pb-5">
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <div class="text-white text-center">
               <h3>
                 New Confirmed
@@ -18,7 +18,7 @@
               {{ covidNewConfirmed }}
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <div class="text-white text-center">
               <h3>
                 Total Confirmed
