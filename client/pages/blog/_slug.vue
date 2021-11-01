@@ -50,6 +50,7 @@ export default {
   height: 350px;
   object-fit: cover;
   margin-bottom: 3rem;
+  border-radius: 5px;
 }
 
 .single-blog ul, .single-blog ol {
