@@ -46,9 +46,10 @@ export default {
 
 <style>
 .single-blog img {
-  max-width: 100%;
-  height: auto;
-  margin: 3rem 0;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 3rem;
 }
 
 .single-blog ul, .single-blog ol {

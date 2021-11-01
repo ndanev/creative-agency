@@ -5,7 +5,7 @@ slug: front-end-development
 image: frontend-web-development.jpg
 ---
 
-![Front End Development](../../_nuxt/assets/images/frontend-web-development.jpg)
+![Front End Development](https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 
 Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.
 

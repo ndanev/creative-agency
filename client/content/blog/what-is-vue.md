@@ -5,7 +5,7 @@ slug: what-is-vue
 image: vue.jpg
 ---
 
-![Vue](../../_nuxt/assets/images/vue.jpg)
+![Vue](https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 
 Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members.
 

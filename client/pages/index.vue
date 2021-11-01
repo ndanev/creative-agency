@@ -409,7 +409,7 @@ export default {
 }
 
 .blog-card img {
-  height: 250px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
