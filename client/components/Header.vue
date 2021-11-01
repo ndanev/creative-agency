@@ -10,7 +10,7 @@
             <span>Agency</span>
           </nuxt-link>
         </div>
-        <ul v-if="desktopNav" class="header-list">
+        <ul v-show="desktopNav" class="header-list">
           <li v-for="(link, index) in headerLinks" :key="index" class="header-list-item">
             <nuxt-link class="header-list-link" :to="'/'+link.route">
               {{ link.name }}
