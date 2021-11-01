@@ -2,10 +2,10 @@
   <div>
     <div class="hero">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
             <h1 class="hero-title">
-              Blog
+              {{ article.title }}
             </h1>
           </div>
         </div>
@@ -16,11 +16,6 @@
         <div v-if="article" class="row justify-content-center">
           <div class="col-md-8">
             <nuxt-content :document="article" class="single-blog" />
-          </div>
-        </div>
-        <div v-if="!article" class="row justify-content-center">
-          <div class="col-md-8">
-            Blog Not Found!
           </div>
         </div>
       </div>

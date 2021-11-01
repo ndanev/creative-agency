@@ -10,7 +10,7 @@
             <span>Agency</span>
           </nuxt-link>
         </div>
-        <ul v-show="desktopNav" class="header-list">
+        <ul v-if="desktopNav" class="header-list">
           <li v-for="(link, index) in headerLinks" :key="index" class="header-list-item">
             <nuxt-link class="header-list-link" :to="'/'+link.route">
               {{ link.name }}
@@ -20,8 +20,7 @@
         <div v-show="mobile" class="menu-icon" @click="toggleMobileNav">
           <span>Menu</span>
           <i
-            class="fas fa-bars"
-            :class="{'fas fa-times': mobileNav}"
+            :class="mobileNav ? 'fas fa-times' : 'fas fa-bars'"
           />
         </div>
         <transition name="slide-fade" class="mobile-nav">

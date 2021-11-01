@@ -5,7 +5,7 @@
         <h1>
           Web Design & <span>Development</span>
         </h1>
-        <div>
+        <div class="phone-number">
           <i class="fas fa-phone-alt" />
           <a href="tel:+14373283418">
             (437) 328-3418
@@ -72,6 +72,11 @@ export default {
 .header-top a {
     color: #fff;
     font-weight: bold;
+    transition: all .25s;
+}
+
+.phone-number a:hover {
+  color: #f33c7a;
 }
 
 @media (max-width: 767px) {

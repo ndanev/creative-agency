@@ -24,10 +24,11 @@
               </div>
               <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h3 class="project-title">
-                  {{ project.title }}
+                  {{ project.title }} - <span>{{ project.subtitle }}</span>
                 </h3>
                 <p class="project-desc">
-                  {{ project.desc }}
+                  {{ project.desc }} <br>
+                  {{ project.technologies }}
                 </p>
                 <div v-if="project.githubLink" class="mb-1">
                   - <a :href="project.githubLink" class="project-link" target="_blank">Github Link <i class="fas fa-external-link-alt" /></a>
@@ -52,8 +53,10 @@ export default {
         {
           id: 1,
           title: 'Job Loop',
+          subtitle: '(Online Job Search Application)',
           image: require('@/assets/images/jobloop.jpg'),
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          desc: 'Browsing for job opportunities can be done as a guest, with the ability to register if they wish to apply or to post their own job.',
+          technologies: 'The technologies used include HTML, CSS, Javascript, VueJS, NodeJS and MongoDB.',
           githubLink: 'https://github.com/ndanev/JobLoop/',
           website: ''
         },
@@ -129,5 +132,9 @@ export default {
 
 .project-link:hover {
   color: #f33c7a;
+}
+
+.project-title span {
+  font-size: 1.2rem;
 }
 </style>
