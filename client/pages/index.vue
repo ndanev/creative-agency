@@ -3,13 +3,13 @@
     <div class="hero-home">
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-md-7 offset d-flex  justify-content-center flex-column">
+          <div class="col-md-7 offset d-flex justify-content-center flex-column">
             <h2 class="hero-home-title">
               Online <br> Creative
               <span>Agency</span>
             </h2>
             <p class="hero-lead mb-5">
-              Looking for someone to realize your digital dreams? You’ve come to the right place!
+              {{ homeContent.heroSubtitle }}
             </p>
             <div>
               <a class="button button-primary" href="mailto:nemanja.danev.93@gmail.com">
@@ -26,7 +26,7 @@
           <div class="col-md-12 text-left text-md-center">
             <h2 class="section-title">
               <span>
-                About Us
+                {{ homeContent.aboutTitle }}
               </span>
             </h2>
           </div>
@@ -39,7 +39,7 @@
               <span>Creative Agency</span>
             </h2>
             <p class="section-lead">
-              With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.
+              {{ homeContent.aboutContent }}
             </p>
           </div>
           <div class="col-md-6 text-center">
@@ -54,11 +54,11 @@
           <div class="col-md-6 text-center">
             <h2 class="section-title">
               <span>
-                Our Skills
+                {{ homeContent.skillsTitle }}
               </span>
             </h2>
             <p class="section-lead">
-              With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.
+              {{ homeContent.skillsSubtitle }}
             </p>
           </div>
         </div>
@@ -75,16 +75,16 @@
           <div class="col-md-4 text-center">
             <h2 class="section-title">
               <span>
-                Our Works
+                {{ homeContent.worksTitle }}
               </span>
             </h2>
             <p class="section-lead">
-              Browse through our completed projects to get an idea of what we can do for you.
+              {{ homeContent.worksSubtitle }}
             </p>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div v-for="work in works" :key="work.id" class="col-md-3">
+          <div v-for="work in works" :key="work.id" class="col-12 col-sm-6 col-md-3">
             <nuxt-link to="/works">
               <WorkCard :title="work.workTitle" :image="work.img" />
             </nuxt-link>
@@ -98,11 +98,11 @@
           <div class="col-md-6 text-center">
             <h2 class="section-title">
               <span>
-                Work Process
+                {{ homeContent.processTitle }}
               </span>
             </h2>
             <p class="section-lead">
-              Our clients peace of mind is our number one priority. We are a team and we will work together with you on every step of the way to bring your ideas to life.
+              {{ homeContent.processSubtitle }}
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="col-md-6 text-center">
             <h2 class="section-title">
               <span>
-                Latest Blogs
+                {{ homeContent.blogsTitle }}
               </span>
             </h2>
           </div>
@@ -147,11 +147,11 @@
           <div class="col-md-6 text-center">
             <h2 class="section-title">
               <span>
-                Contact
+                {{ homeContent.contactTitle }}
               </span>
             </h2>
             <p class="section-lead">
-              If you have any question or you want to contact us, feel free to send us an email. We’re here to help you!
+              {{ homeContent.contactSubtitle }}
             </p>
           </div>
         </div>
@@ -209,6 +209,21 @@ export default {
   },
   data () {
     return {
+      homeContent:
+        {
+          heroSubtitle: 'Looking for someone to realize your digital dreams? You’ve come to the right place!',
+          aboutTitle: 'About Us',
+          aboutContent: 'With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.',
+          skillsTitle: 'Our Skills',
+          skillsSubtitle: 'With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.',
+          worksTitle: 'Our Works',
+          worksSubtitle: 'Browse through our completed projects to get an idea of what we can do for you.',
+          processTitle: 'Work Process',
+          processSubtitle: 'Our clients peace of mind is our number one priority. We are a team and we will work together with you on every step of the way to bring your ideas to life.',
+          blogsTitle: 'Latest Blogs',
+          contactTitle: 'Contact',
+          contactSubtitle: 'If you have any question or you want to contact us, feel free to send us an email. We’re here to help you!'
+        },
       skills: [
         {
           title: 'HTML',
