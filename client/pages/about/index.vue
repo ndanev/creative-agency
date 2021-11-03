@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h1 class="hero-title">
-              About
+              {{ aboutContact.heroTitle }}
             </h1>
           </div>
         </div>
@@ -16,10 +16,10 @@
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
             <h2 class="section-title">
-              We are Creative Agnecy
+              {{ aboutContact.sectionTitle }}
             </h2>
             <p class="section-lead">
-              With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.
+              {{ aboutContact.sectionSubtitle }}
             </p>
             <img src="@/assets/images/about-page.jpg" class="img-fluid" alt>
           </div>
@@ -31,6 +31,15 @@
 
 <script>
 export default {
+  data () {
+    return {
+      aboutContact: {
+        heroTitle: 'About',
+        sectionTitle: 'We are Creative Agnecy',
+        sectionSubtitle: 'With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.'
+      }
+    }
+  },
   head () {
     return {
       title: 'About | Online Creative Agency',

@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1 class="hero-title">
-              Process
+              {{ processContent.heroTitle }}
             </h1>
           </div>
         </div>
@@ -26,11 +26,11 @@
           <div class="col-md-6 text-center">
             <h2 class="section-title">
               <span>
-                Our Skills
+                {{ processContent.skillsTitle }}
               </span>
             </h2>
             <p class="section-lead">
-              With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.
+              {{ processContent.skillsSubtitle }}
             </p>
           </div>
         </div>
@@ -48,6 +48,11 @@
 export default {
   data () {
     return {
+      processContent: {
+        heroTitle: 'Process',
+        skillsTitle: 'Our Skills',
+        skillsSubtitle: 'With professionals in all areas of web development, rest assured that your projects will be completed and presented online with pixel-precision.'
+      },
       workProcess: [
         {
           id: 1,

@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h1 class="hero-title">
-              Covid 19 <span>Coronavirus</span>
+              {{ covidContent.heroTitle }} <span>{{ covidContent.heroTitleAddition }}</span>
             </h1>
           </div>
         </div>
@@ -13,7 +13,7 @@
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="text-white text-center">
               <h3>
-                New Confirmed
+                {{ covidContent.heroSubtitleOne }}
               </h3>
               {{ covidNewConfirmed }}
             </div>
@@ -21,7 +21,7 @@
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="text-white text-center">
               <h3>
-                Total Confirmed
+                {{ covidContent.heroSubtitleTwo }}
               </h3>
               {{ covidTotalConfirmed }}
             </div>
@@ -29,7 +29,7 @@
           <div class="col-md-4">
             <div class="text-white text-center">
               <h3>
-                Total Deaths
+                {{ covidContent.heroSubtitleThree }}
               </h3>
               {{ covidTotalDeaths }}
             </div>
@@ -114,7 +114,14 @@ export default {
       covidDate: null,
       covidCountries: null,
       message: false,
-      loading: false
+      loading: false,
+      covidContent: {
+        heroTitle: 'Covid 19',
+        heroTitleAddition: 'Coronavirus',
+        heroSubtitleOne: 'New Confirmed',
+        heroSubtitleTwo: 'Total Confirmed',
+        heroSubtitleThree: 'Total Deaths'
+      }
     }
   },
   head () {

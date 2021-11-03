@@ -5,20 +5,13 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h1 class="hero-title">
-              Blogs
+              {{ blogsContent.heroTitle }} <span>{{ blogsContent.heroTitleAddition }}</span>
             </h1>
           </div>
         </div>
       </div>
     </div>
     <section class="section">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="section-title">
-            Read our <span>blogs</span>
-          </h2>
-        </div>
-      </div>
       <div class="container">
         <div class="row justify-content-center">
           <div v-for="(article, index) in articles" :key="index" class="col-md-8 mb-3">
@@ -45,6 +38,14 @@ export default {
   async asyncData ({ $content, params }) {
     const articles = await $content('blog', params.slug).only(['title', 'desc', 'image', 'slug']).sortBy('createdAt', 'asc').fetch()
     return { articles }
+  },
+  data () {
+    return {
+      blogsContent: {
+        heroTitle: 'Read Our',
+        heroTitleAddition: 'Blogs'
+      }
+    }
   },
   head () {
     return {

@@ -5,10 +5,10 @@
         <div class="row">
           <div class="col-md-12">
             <h1 class="hero-title">
-              Portfolio
+              {{ worksContent.heroTitle }}
             </h1>
             <p class="hero-lead">
-              Personal <span>Projects</span>
+              {{ worksContent.heroSubtitle }} <span>{{ worksContent.heroSubtitleAddition }}</span>
             </p>
           </div>
         </div>
@@ -24,8 +24,11 @@
               </div>
               <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h3 class="project-title">
-                  {{ project.title }} - <span>{{ project.subtitle }}</span>
+                  {{ project.title }}
                 </h3>
+                <div class="project-subtitle">
+                  {{ project.subtitle }}
+                </div>
                 <p class="project-desc">
                   {{ project.desc }} <br>
                   {{ project.technologies }}
@@ -49,6 +52,11 @@
 export default {
   data () {
     return {
+      worksContent: {
+        heroTitle: 'Portfolio',
+        heroSubtitle: 'Personal',
+        heroSubtitleAddition: 'Projects'
+      },
       projects: [
         {
           id: 1,
@@ -134,7 +142,8 @@ export default {
   color: #f33c7a;
 }
 
-.project-title span {
+.project-subtitle {
   font-size: 1.2rem;
+  margin-bottom: .8rem;
 }
 </style>

@@ -13,7 +13,7 @@
             </p>
             <div>
               <a class="button button-primary" href="mailto:nemanja.danev.93@gmail.com">
-                Contact Us
+                {{ homeContent.heroButton }}
               </a>
             </div>
           </div>
@@ -161,27 +161,27 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Your Title</label>
-                    <input type="text" class="form-control" placeholder="Enter Your Title">
+                    <label>{{ homeContent.contactLabelTitle }}</label>
+                    <input type="text" class="form-control" :placeholder="homeContent.contactPlaceholderTitle">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Your Name">
+                    <label>{{ homeContent.contactLabelName }}</label>
+                    <input type="text" class="form-control" :placeholder="homeContent.contactPlaceholderName">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="text" class="form-control" placeholder="Enter Your Email">
+                    <label>{{ homeContent.contactLabelEmail }}</label>
+                    <input type="text" class="form-control" :placeholder="homeContent.contactPlaceholderEmail">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-colntrol">
-                    <label>Your Message</label>
+                    <label>{{ homeContent.contactLabelMessage }}</label>
                     <textarea class="form-group w-100" rows="10" />
                   </div>
                 </div>
@@ -189,7 +189,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <button type="submit" class="button button-primary">
-                    Send
+                    {{ homeContent.contactButton }}
                   </button>
                 </div>
               </div>
@@ -212,6 +212,7 @@ export default {
       homeContent:
         {
           heroSubtitle: 'Looking for someone to realize your digital dreams? You’ve come to the right place!',
+          heroButton: 'Contact Us',
           aboutTitle: 'About Us',
           aboutContent: 'With a strong sense of aesthetic and an eye for pixel perfection, we pair with our clients to create the best versions of their design ideas. We offer elegant solutions and user experiences which enhance the online presence of a wide variety of businesses. Our team is ready for whatever it is your heart desires, willing to go the extra mile to create your perfect project.',
           skillsTitle: 'Our Skills',
@@ -222,7 +223,15 @@ export default {
           processSubtitle: 'Our clients peace of mind is our number one priority. We are a team and we will work together with you on every step of the way to bring your ideas to life.',
           blogsTitle: 'Latest Blogs',
           contactTitle: 'Contact',
-          contactSubtitle: 'If you have any question or you want to contact us, feel free to send us an email. We’re here to help you!'
+          contactSubtitle: 'If you have any question or you want to contact us, feel free to send us an email. We’re here to help you!',
+          contactLabelTitle: 'Your Title',
+          contactPlaceholderTitle: 'Enter Your Title',
+          contactLabelName: 'Your Name',
+          contactPlaceholderName: 'Enter Your Name',
+          contactLabelEmail: 'Your Email',
+          contactPlaceholderEmail: 'Enter Your Email',
+          contactLabelMessage: 'Your Message',
+          contactButton: 'Send'
         },
       skills: [
         {
