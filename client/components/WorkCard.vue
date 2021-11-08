@@ -27,11 +27,15 @@ export default {
 <style>
 .work-card {
   position: relative;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
   transition: all .25s;
 }
 
 .work-card:hover {
-  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .work-card img {
@@ -41,9 +45,15 @@ export default {
 }
 
 .work-card:hover > .work-card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .work-card-info {

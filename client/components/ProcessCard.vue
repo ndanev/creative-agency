@@ -30,6 +30,8 @@ export default {
 .process-card {
     color: #fff;
     margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 

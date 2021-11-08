@@ -356,7 +356,8 @@ export default {
   font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
-  animation: .4s ease-out 0s 1 slideInFromLeft;
+  -webkit-animation: .4s ease-out 0s 1 slideInFromLeft;
+          animation: .4s ease-out 0s 1 slideInFromLeft;
 }
 
 .hero-home-title span {
@@ -417,9 +418,16 @@ export default {
   bottom: 0;
   right: 0;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .blog-card .details:hover {
@@ -436,7 +444,8 @@ export default {
 .blog-card img {
   height: 350px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 
@@ -479,6 +488,22 @@ export default {
   height: 45px;
 }
 
+.home-form .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.home-form .form-control::-moz-placeholder {
+  color: #fff;
+}
+
+.home-form .form-control:-ms-input-placeholder {
+  color: #fff;
+}
+
+.home-form .form-control::-ms-input-placeholder {
+  color: #fff;
+}
+
 .home-form .form-control::placeholder {
   color: #fff;
 }
@@ -491,25 +516,41 @@ export default {
   padding: 1rem;
 }
 
-@keyframes slideInFromLeft {
+@-webkit-keyframes slideInFromLeft {
   0% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 .animate-8 {
-  animation: .8s ease-out 0s 1 slideInFromLeft;
+  -webkit-animation: .8s ease-out 0s 1 slideInFromLeft;
+          animation: .8s ease-out 0s 1 slideInFromLeft;
 }
 
 .animate-6 {
-  animation: .6s ease-out 0s 1 slideInFromLeft;
+  -webkit-animation: .6s ease-out 0s 1 slideInFromLeft;
+          animation: .6s ease-out 0s 1 slideInFromLeft;
 }
 
 .animate-4 {
-  animation: .4s ease-out 0s 1 slideInFromLeft;
+  -webkit-animation: .4s ease-out 0s 1 slideInFromLeft;
+          animation: .4s ease-out 0s 1 slideInFromLeft;
 }
 
 @media (max-width: 991px) {

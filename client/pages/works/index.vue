@@ -131,6 +131,8 @@ export default {
 .project-link {
   color: #2d1948;
   font-weight: bold;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
   transition: all .25s;
 }
 

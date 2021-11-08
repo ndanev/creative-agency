@@ -116,6 +116,8 @@ export default {
 header {
   width: 100%;
   background-color: rgba(45, 25, 72, 1);
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
     border-bottom: 1px solid #705096;
 }
@@ -133,15 +135,23 @@ a {
 
 ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   margin: 0;
 }
 
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header-list {
@@ -158,9 +168,16 @@ header nav {
   text-transform: uppercase;
   padding: 1rem;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo-link:hover {
@@ -179,6 +196,8 @@ header nav {
   font-weight: 100;
   margin-left: 40px;
   margin-bottom: -5px;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
 
@@ -211,6 +230,8 @@ header nav {
   color: #fff;
   position: relative;
   font-size: .9rem;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
   transition: all .25s;
 }
 
@@ -224,6 +245,8 @@ header nav {
   background-color: #f33c7a;
   z-index: 1;
   margin: 0 auto;
+  -webkit-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
   transition: all .25s ease-in;
 }
 
@@ -257,9 +280,15 @@ header nav {
 
 .menu-icon {
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   font-size: 1.6rem;
 }
@@ -270,9 +299,16 @@ header nav {
 }
 
 .dropdown-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -281,6 +317,8 @@ header nav {
   max-width: 275px;
   height: 100%;
   background-color: #1b0c30;
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
 
@@ -298,6 +336,8 @@ header nav {
   display: block;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
 
@@ -306,20 +346,28 @@ header nav {
 }
 
 .slide-fade-enter-active {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 .slide-fade-leave-active {
+  -webkit-transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  -o-transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .slide-fade-enter, .slide-fade-leave-to {
-  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
   opacity: 0;
 }
 
 @media (max-width: 991px) {
   .header-list-item:last-child::before {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 

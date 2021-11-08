@@ -23,23 +23,38 @@ export default {}
     height: 75px;
     background-color: #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 4px solid #fff;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
-    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+            box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
 }
 
 .email-me a > img {
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
   transition: all .25s;
 }
 
 .email-me a:hover > img {
-  transform: scale(.9);
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+          transform: scale(.9);
 }
 
 .email-me a:hover > .email-me-text  {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -55,13 +70,22 @@ export default {}
   top: 50%;
   width: 150px;
   height: 35px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: none;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 4px;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
   transition: all .25s;
-  box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+  -webkit-box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+          box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
   font-size: .8rem;
 }
 

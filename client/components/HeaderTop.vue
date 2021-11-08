@@ -41,9 +41,17 @@ export default {
     background-color: rgba(27, 12, 48, 1);
     width: 100%;
     height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
 
@@ -72,6 +80,8 @@ export default {
 .header-top a {
     color: #fff;
     font-weight: bold;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
     transition: all .25s;
 }
 

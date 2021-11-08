@@ -48,7 +48,8 @@ export default {
 .single-blog img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 3rem;
   border-radius: 5px;
 }

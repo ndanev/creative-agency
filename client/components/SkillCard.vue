@@ -38,10 +38,19 @@ export default {
   text-align: center;
   color: #fff;
   font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 3rem;
 }
 
@@ -63,9 +72,15 @@ export default {
   height: 100%;
   border-radius: 50%;
   border: 5px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 3rem;
   color: #fff;
 }
@@ -74,11 +89,14 @@ export default {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    -webkit-transition: all .85s;
+    -o-transition: all .85s;
     transition: all .85s;
 }
 
 .skill-card-inner-progress img:hover {
-    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
 }
 
 .skill-card-content {
