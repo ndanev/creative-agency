@@ -4,14 +4,14 @@
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-7 offset d-flex justify-content-center flex-column">
-            <h2 class="hero-home-title">
+            <h2 class="hero-home-title animate-4">
               Online <br> Creative
               <span>Agency</span>
             </h2>
-            <p class="hero-lead mb-5">
+            <p class="hero-lead mb-5 animate-6">
               {{ homeContent.heroSubtitle }}
             </p>
-            <div>
+            <div class="hero-button-wrapper animate-8">
               <a class="button button-primary" href="mailto:nemanja.danev.93@gmail.com">
                 {{ homeContent.heroButton }}
               </a>
@@ -43,7 +43,7 @@
             </p>
           </div>
           <div class="col-md-6 text-center">
-            <img src="@/assets/images/home-about.png" class="img-fluid" alt>
+            <img src="@/assets/images/home-about.webp" class="img-fluid" alt="Creative Agency" title="Creative Agency">
           </div>
         </div>
       </div>
@@ -261,7 +261,7 @@ export default {
         },
         {
           title: 'Node.js',
-          image: require('@/assets/images/nodejs-logo.png'),
+          image: require('@/assets/images/nodejs-logo.webp'),
           desc: 'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the users web browser.'
         }
       ],
@@ -269,22 +269,22 @@ export default {
         {
           id: 1,
           workTitle: 'Job Loop',
-          img: require('@/assets/images/jobloop.jpg')
+          img: require('@/assets/images/jobloop.webp')
         },
         {
           id: 2,
           workTitle: 'Github User Finder',
-          img: require('@/assets/images/user-finder.jpg')
+          img: require('@/assets/images/user-finder.webp')
         },
         {
           id: 3,
           workTitle: 'Natural Tasty',
-          img: require('@/assets/images/tastyland.jpg')
+          img: require('@/assets/images/tastyland.webp')
         },
         {
           id: 4,
           workTitle: 'Creative Agency',
-          img: require('@/assets/images/creative-agency.jpg')
+          img: require('@/assets/images/creative-agency.webp')
         }
       ],
       workProcess: [
@@ -343,7 +343,7 @@ export default {
 
 <style>
 .hero-home {
-  background-image: url("@/assets/images/hero-home.jpg");
+  background-image: url("@/assets/images/hero-home.webp");
   background-color: rgba(45, 25, 72, 1);
   background-repeat: no-repeat;
   background-size: cover;
@@ -356,6 +356,7 @@ export default {
   font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
+  animation: .4s ease-out 0s 1 slideInFromLeft;
 }
 
 .hero-home-title span {
@@ -388,7 +389,7 @@ export default {
 }
 
 .section-process {
-  background-image: url("@/assets/images/work-process-bg.jpg");
+  background-image: url("@/assets/images/work-process-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -440,7 +441,7 @@ export default {
 }
 
 .section-contact {
-  background-image: url("@/assets/images/contact-bg.jpg");
+  background-image: url("@/assets/images/contact-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -488,6 +489,27 @@ export default {
   border-radius: 0;
   border: 0;
   padding: 1rem;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-8 {
+  animation: .8s ease-out 0s 1 slideInFromLeft;
+}
+
+.animate-6 {
+  animation: .6s ease-out 0s 1 slideInFromLeft;
+}
+
+.animate-4 {
+  animation: .4s ease-out 0s 1 slideInFromLeft;
 }
 
 @media (max-width: 991px) {

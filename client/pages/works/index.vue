@@ -20,7 +20,7 @@
           <div v-for="project in projects" :key="project.id" class="col-md-12 mb-5 project">
             <div class="row">
               <div class="col-md-6 mb-3 mb-md-0">
-                <img :src="project.image" class="img-fluid" alt>
+                <img :src="project.image" class="img-fluid" :alt="project.title" :title="project.title">
               </div>
               <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h3 class="project-title">
@@ -62,7 +62,7 @@ export default {
           id: 1,
           title: 'Job Loop',
           subtitle: '(Online Job Search Application)',
-          image: require('@/assets/images/jobloop.jpg'),
+          image: require('@/assets/images/jobloop.webp'),
           desc: 'Browsing for job opportunities can be done as a guest, with the ability to register if they wish to apply or to post their own job.',
           technologies: 'The technologies used include HTML, CSS, Javascript, VueJS, NodeJS and MongoDB.',
           githubLink: 'https://github.com/ndanev/JobLoop/',
@@ -71,7 +71,7 @@ export default {
         {
           id: 2,
           title: 'Github User Finder',
-          image: require('@/assets/images/user-finder.jpg'),
+          image: require('@/assets/images/user-finder.webp'),
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           githubLink: 'https://github.com/ndanev/user-finder',
           website: 'https://online-user-finder.netlify.app/'
@@ -79,7 +79,7 @@ export default {
         {
           id: 3,
           title: 'Tastyland',
-          image: require('@/assets/images/tastyland.jpg'),
+          image: require('@/assets/images/tastyland.webp'),
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           githubLink: 'https://github.com/ndanev/Tastyland-Website',
           website: 'https://tastyland-website.netlify.app/'
@@ -87,7 +87,7 @@ export default {
         {
           id: 4,
           title: 'Online Creative Agency',
-          image: require('@/assets/images/creative-agency.jpg'),
+          image: require('@/assets/images/creative-agency.webp'),
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           githubLink: 'https://github.com/ndanev/creative-agency',
           website: 'https://online-agency.herokuapp.com/'

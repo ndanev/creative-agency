@@ -113,7 +113,7 @@ export default {
         },
         {
           title: 'Node.js',
-          image: require('@/assets/images/nodejs-logo.png'),
+          image: require('@/assets/images/nodejs-logo.webp'),
           desc: 'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the users web browser.'
         }
       ]
