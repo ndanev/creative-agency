@@ -163,7 +163,8 @@ export default {
 }
 
 .project-subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: .8rem;
+  font-weight: 500;
 }
 </style>
