@@ -21,7 +21,14 @@
             <p class="section-lead">
               {{ aboutContact.sectionSubtitle }}
             </p>
-            <img src="@/assets/images/about-page.jpg" class="img-fluid" alt>
+            <img
+              src="@/assets/images/about-page.jpg"
+              class="img-fluid"
+              width="730"
+              height="310"
+              :alt="aboutContact.sectionTitle"
+              :title="aboutContact.sectionTitle"
+            >
           </div>
         </div>
       </div>

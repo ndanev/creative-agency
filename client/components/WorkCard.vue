@@ -1,6 +1,6 @@
 <template>
   <article class="work-card">
-    <img :src="image" alt class="img-fluid">
+    <img :src="image" alt class="img-fluid" width="445" height="325">
     <div class="work-card-info">
       <h3 class="work-card-title mb-3">
         {{ title }}

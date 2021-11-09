@@ -2,7 +2,7 @@
   <article class="skill-card">
     <div class="skill-card-inner">
       <div class="skill-card-inner-progress">
-        <img :src="image" alt>
+        <img :src="image" width="150" height="150" alt>
       </div>
     </div>
     <h3 class="skill-card-title mb-3">

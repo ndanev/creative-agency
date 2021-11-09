@@ -16,7 +16,13 @@
         <div class="row justify-content-center">
           <div v-for="(article, index) in articles" :key="index" class="col-md-8 mb-3">
             <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card mb-3 mb-md-0">
-              <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid" alt>
+              <img
+                :src="require(`@/assets/images/${article.image}`)"
+                class="img-fluid"
+                width="730"
+                height="350"
+                :alt="article.title"
+              >
               <div class="details">
                 <h3>
                   {{ article.title }}

@@ -43,7 +43,14 @@
             </p>
           </div>
           <div class="col-md-6 text-center">
-            <img src="@/assets/images/home-about.webp" class="img-fluid" alt="Creative Agency" title="Creative Agency">
+            <img
+              src="@/assets/images/home-about.webp"
+              width="500"
+              height="500"
+              class="img-fluid"
+              alt="Creative Agency"
+              title="Creative Agency"
+            >
           </div>
         </div>
       </div>
@@ -127,7 +134,14 @@
         <div class="row">
           <div v-for="(article, index) in articles" :key="index" class="col-md-4">
             <nuxt-link :to="{ name: 'blog-slug', params:{slug: article.slug}}" class="d-block blog-card mb-3 mb-md-0">
-              <img :src="require(`@/assets/images/${article.image}`)" class="img-fluid" alt>
+              <img
+                :src="require(`@/assets/images/${article.image}`)"
+                class="img-fluid"
+                :alt="article.title"
+                :title="article.title"
+                width="604"
+                height="350"
+              >
               <div class="details">
                 <h3>
                   {{ article.title }}

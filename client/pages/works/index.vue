@@ -20,7 +20,14 @@
           <div v-for="project in projects" :key="project.id" class="col-md-12 mb-5 project">
             <div class="row">
               <div class="col-md-6 mb-3 mb-md-0">
-                <img :src="project.image" class="img-fluid" :alt="project.title" :title="project.title">
+                <img
+                  :src="project.image"
+                  class="img-fluid"
+                  width="402"
+                  height="313"
+                  :alt="project.title"
+                  :title="project.title"
+                >
               </div>
               <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h3 class="project-title">

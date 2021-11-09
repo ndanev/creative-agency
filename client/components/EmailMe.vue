@@ -1,7 +1,7 @@
 <template>
   <div class="email-me">
     <a class="d-block position-relative" href="mailto:nemanja.danev.93@gmail.com">
-      <img src="@/assets/images/gmail.jpg" alt>
+      <img src="@/assets/images/gmail.jpg" alt="Send me an email" width="50" height="40">
       <div class="email-me-text">
         Send me an email!
       </div>
