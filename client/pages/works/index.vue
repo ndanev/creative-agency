@@ -38,7 +38,8 @@
                 </div>
                 <p class="project-desc">
                   {{ project.desc }} <br>
-                  {{ project.technologies }}
+                  {{ project.technologies }} <br>
+                  <em>{{ project.responsive }}</em>
                 </p>
                 <div v-if="project.githubLink" class="mb-1">
                   - <a :href="project.githubLink" class="project-link" target="_blank">Github Link <i class="fas fa-external-link-alt" /></a>
@@ -70,32 +71,42 @@ export default {
           title: 'Job Loop',
           subtitle: '(Online Job Search Application)',
           image: require('@/assets/images/jobloop.webp'),
-          desc: 'Browsing for job opportunities can be done as a guest, with the ability to register if they wish to apply or to post their own job.',
-          technologies: 'The technologies used include HTML, CSS, Javascript, VueJS, NodeJS and MongoDB.',
+          desc: '- Browsing for job opportunities can be done as a guest, with the ability to register if they wish to apply or to post their own job.',
+          technologies: '- The technologies used include HTML, CSS, Javascript, VueJS, NodeJS and MongoDB.',
+          responsive: '- Full Responsive',
           githubLink: 'https://github.com/ndanev/JobLoop/',
           website: ''
         },
         {
           id: 2,
           title: 'Github User Finder',
+          subtitle: '(Online GitHub User Finder Application)',
           image: require('@/assets/images/user-finder.webp'),
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          desc: '- Created an application that allows users to search for GitHub profiles, and allows them to view the profiles and repositories. Created by fetching the GitHub API.',
+          technologies: '- Technology used: HTML, CSS(SCSS), Javascript, Vue.js, Bootstrap, Axios',
+          responsive: '- Full Responsive',
           githubLink: 'https://github.com/ndanev/user-finder',
           website: 'https://online-user-finder.netlify.app/'
         },
         {
           id: 3,
           title: 'Tastyland',
+          subtitle: '(Online Tastyland Website)',
           image: require('@/assets/images/tastyland.webp'),
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          desc: '- Convert PSD file (Photoshop) to HTML, CSS and Javascript',
+          technologies: '- Technology used: HTML, CSS, Javascript, Bootstrap',
+          responsive: '- Full Responsive',
           githubLink: 'https://github.com/ndanev/Tastyland-Website',
           website: 'https://tastyland-website.netlify.app/'
         },
         {
           id: 4,
           title: 'Online Creative Agency',
+          subtitle: '(Creative Agency Website – Personal Portfolio)',
           image: require('@/assets/images/creative-agency.webp'),
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          desc: '- Created a website for a creative agency which serves as a presentation of my personal portfolio. Design template taken from a free PSD website.',
+          technologies: '- Technology used: HTML, CSS, Bootstrap, Javascript, Nuxt.js (Vue.js), Axios',
+          responsive: '- Full Responsive',
           githubLink: 'https://github.com/ndanev/creative-agency',
           website: 'https://online-agency.herokuapp.com/'
         }
